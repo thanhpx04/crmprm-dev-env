@@ -1,0 +1,39 @@
+{{!< layout}}
+<header class="aui-page-header">
+  <div class="aui-page-header-inner">
+    <div class="aui-page-header-main intro-header">
+      <h1>The Connect app</h1>
+
+      <p class="subtitle">Using Nodejs and AUI and deploy on Azure</p>
+    </div>
+  </div>
+</header>
+
+<div class="aui-page-panel main-panel">
+  <div class="aui-page-panel-inner">
+    <section class="aui-page-panel-item">
+      <div class="aui-group">
+        <div class="aui-item">
+          <p>
+            <button class="aui-button aui-button-primary" type="button" onclick="getIssuesOfCurrentUser()">
+              Get current issues
+            </button>
+          </p>
+          <p>
+            <table class="aui aui-table-sortable">
+              <thead>
+                  <tr>
+                      <th id="basic-number" class="aui-table-column-issue-key">ID</th>
+                      <th id="basic-fname" class="aui-table-column-issue-key">Key</th>
+                      <th id="basic-lname" class="aui-table-column-issue-key">Summary</th>
+                      <th id="basic-username" class="aui-table-column-unsortable">Project</th>
+                  </tr>
+              </thead>
+              <tbody id="listIssuesOfCurrentUser"></tbody>
+            </table>
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
