@@ -39,12 +39,19 @@ export default function routes(app, addon) {
       // Rendering a template is easy; the render method takes two params: the name of the component or template file, and its props.
       // Handlebars and jsx are both supported, but please note that jsx changes require `npm run watch-jsx` in order to be picked up by the server.
       debugger;
+      console.log(addon);
+      console.log(req);
       var httpClient = addon.httpClient(req);
       const {issueKey} = req.query;
 
       httpClient.get(`/rest/api/2/issue/${issueKey}/changelog`, function (err, res, body) {
         debugger;
-        resolve(JSON.parse(body).fields.summary)
+        console.log("err");
+        console.log(err);
+        console.log("res");
+        console.log(res);
+        console.log("body");
+        console.log(body);
       });
       res.render(
           'main.hbs', // change this to 'hello-world.jsx' to use the Atlaskit & React version
