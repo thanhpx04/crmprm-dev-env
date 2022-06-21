@@ -1,6 +1,6 @@
 {
-    "key": "thanh-app-1111170622",
-    "name": "Connect app Nodejs Azure",
+    "key": "thanh-app-1837210622",
+    "name": "Connect app Nodejs Azure - demo",
     "description": "Connect framework with Nodejs, deploy on Azure",
     "baseUrl": "https://connect-app-nodejs.azurewebsites.net",
     "authentication": {
@@ -35,6 +35,6 @@
               },
               "key": "thanh-reminder-web-right-panel"
             }
-          ],
+        ]
     }
 }
