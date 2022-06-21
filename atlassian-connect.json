@@ -4,10 +4,7 @@
     "description": "Connect framework with Nodejs, deploy on Azure",
     "baseUrl": "https://crmprm-dev-env.azurewebsites.net",
     "authentication": {
-        "type": "jwt"
-    },
-    "lifecycle": {
-        "installed": "/installed"
+        "type": "none"
     },
     "scopes": [
         "READ"
