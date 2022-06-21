@@ -10,6 +10,9 @@
     // Use views/unauthorized.hbs for error page.
     "errorTemplate": true,
 
+    // Public URL to production app.
+    "localBaseUrl": "https://crmprm-dev-env.azurewebsites.net",
+
     // atlassian-connect-express currently integrates with Sequelize for
     // persistence to store the host client information (i.e. client key,
     // host public key etc.). When no adapter is specified, it defaults to
@@ -64,7 +67,7 @@
     "errorTemplate": true,
 
     // Public URL to production app.
-    "localBaseUrl": "https://connect-app-nodejs.azurewebsites.net",
+    "localBaseUrl": "https://crmprm-dev-env.azurewebsites.net",
     // "store": {
     //   // Don't use memory storage for production, otherwise
     //   // data in the storage will go away when the app server restarts.

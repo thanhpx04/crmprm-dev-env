@@ -10,7 +10,14 @@ export default function routes(app, addon) {
     app.get('/hello-world', (req, res) => {
       // Rendering a template is easy; the render method takes two params: the name of the component or template file, and its props.
       // Handlebars and jsx are both supported, but please note that jsx changes require `npm run watch-jsx` in order to be picked up by the server.
-      const {issueKey} = req.query
+      debugger;
+      var httpClient = addon.httpClient(req);
+      const {issueKey} = req.query;
+
+      httpClient.get(`/rest/api/2/issue/${issueKey}/changelog`, function (err, res, body) {
+        debugger;
+        resolve(JSON.parse(body).fields.summary)
+      });
       res.render(
         'hello-world.hbs', // change this to 'hello-world.jsx' to use the Atlaskit & React version
         {
@@ -24,7 +31,14 @@ export default function routes(app, addon) {
     app.get('/main', (req, res) => {
       // Rendering a template is easy; the render method takes two params: the name of the component or template file, and its props.
       // Handlebars and jsx are both supported, but please note that jsx changes require `npm run watch-jsx` in order to be picked up by the server.
-      const {issueKey} = req.query
+      debugger;
+      var httpClient = addon.httpClient(req);
+      const {issueKey} = req.query;
+
+      httpClient.get(`/rest/api/2/issue/${issueKey}/changelog`, function (err, res, body) {
+        debugger;
+        resolve(JSON.parse(body).fields.summary)
+      });
       res.render(
           'main.hbs', // change this to 'hello-world.jsx' to use the Atlaskit & React version
           {
