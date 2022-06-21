@@ -15,27 +15,26 @@
     "modules": {
         "generalPages": [
             {
-                "key": "main-page-jira",
+                "key": "hello-world-page-jira",
                 "location": "system.top.navigation.bar",
                 "name": {
-                    "value": "Connect app Nodejs Azure"
+                    "value": "Hello World"
                 },
-                "url": "/main",
-                "conditions": [{
-                    "condition": "user_is_logged_in"
-                }]
-            },
-            {
-                "key": "main-page-confluence",
-                "location": "system.header/left",
-                "name": {
-                    "value": "Connect app Nodejs Azure"
-                },
-                "url": "/main",
+                "url": "/hello-world?issueKey={issue.key}",
                 "conditions": [{
                     "condition": "user_is_logged_in"
                 }]
             }
-        ]
+        ],
+        "webPanels": [
+            {
+              "url": "/main?issueKey={issue.key}",
+              "location": "atl.jira.view.issue.left.context",
+              "name": {
+                "value": "Reminder app"
+              },
+              "key": "thanh-reminder-web-right-panel"
+            }
+          ],
     }
 }
