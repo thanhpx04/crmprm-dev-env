@@ -48,7 +48,7 @@ export default function routes(app, addon) {
               resolve(JSON.parse(body).fields.summary)
           });
       })
-    }
+    };
 
     // Add additional route handlers here...
 }
