@@ -17,14 +17,14 @@ export default function routes(app, addon) {
     app.get('/main', addon.authenticate(), (req, res) => {
       const {issueKey} = req.query
       getIssueSummary(addon, req, issueKey).then((issueSummary) => {
-          res.render(
-              'main.hbs',
-              {
-                  title: 'Main',
-                  issueSummary: issueSummary,
-                  issueKey: issueKey
-              }
-          );
+        res.render(
+          'main.hbs',
+          {
+              title: 'Main',
+              issueSummary: issueSummary,
+              issueKey: issueKey
+          }
+        );
       })
     });
 
