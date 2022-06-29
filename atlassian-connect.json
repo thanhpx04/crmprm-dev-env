@@ -35,7 +35,7 @@
               "url": "/main?issueKey={issue.key}",
               "location": "atl.jira.view.issue.left.context",
               "name": {
-                "value": "Main"
+                "value": "Demo require authentication"
               },
               "key": "thanh-reminder-web-right-panel"
             }

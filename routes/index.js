@@ -20,7 +20,7 @@ export default function routes(app, addon) {
         res.render(
           'main.hbs',
           {
-              title: 'Main',
+              title: 'Demo require authentication',
               issueSummary: issueSummary,
               issueKey: issueKey
           }
