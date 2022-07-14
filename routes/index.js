@@ -5,8 +5,7 @@ export default function routes(app, addon) {
 
     app.post('/installed', (req, res) => {
         console.log("installed");
-        // console.log(req.body);
-        console.log(res.body);
+        console.log(req.body);
     });
 
     app.post('/uninstalled', (req, res) => {
@@ -16,6 +15,7 @@ export default function routes(app, addon) {
 
     app.get('/hello-world', (req, res) => {
       console.log("hello-world");
+      console.log(req);
       res.render(
         'hello-world.jsx',
         {
@@ -25,6 +25,8 @@ export default function routes(app, addon) {
     });
 
     app.get('/uikit', (req, res) => {
+      console.log("uikit");
+      console.log(res);
       res.render(
         'uikit-demo.jsx',
         {
@@ -34,6 +36,8 @@ export default function routes(app, addon) {
     });
 
     app.get('/main', addon.authenticate(), (req, res) => {
+      console.log("main");
+      console.log(addon);
       const {issueKey} = req.query
       getIssueSummary(addon, req, issueKey).then((issueSummary) => {
         res.render(
