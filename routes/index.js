@@ -10,10 +10,6 @@ export default function routes(app, addon) {
         console.log(req.body);
     });
 
-    // app.post('/uninstalled', (req, res) => {
-
-    // });
-
     app.get('/hello-world', (req, res) => {
       console.log("hello-world");
       console.log(req);
