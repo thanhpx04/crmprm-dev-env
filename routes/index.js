@@ -3,6 +3,10 @@ export default function routes(app, addon) {
         res.redirect('/atlassian-connect.json');
     });
 
+    app.get('/installed', (req, res) => {
+        console.log(addon);
+    });
+
     app.get('/hello-world', (req, res) => {
       res.render(
         'hello-world.jsx',
