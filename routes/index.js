@@ -5,7 +5,6 @@ export default function routes(app, addon) {
 
     app.post('/installed', (req, res) => {
         console.log("installed");
-        console.log(JSON.parse(addon));
         console.log(req);
         console.log(res);
     });
