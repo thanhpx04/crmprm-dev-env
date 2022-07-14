@@ -4,10 +4,12 @@ export default function routes(app, addon) {
     });
 
     app.get('/installed', (req, res) => {
+        console.log("installed");
         console.log(addon);
     });
 
     app.get('/hello-world', (req, res) => {
+      console.log("hello-world");
       res.render(
         'hello-world.jsx',
         {
