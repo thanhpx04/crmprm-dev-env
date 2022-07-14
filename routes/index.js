@@ -4,15 +4,15 @@ export default function routes(app, addon) {
     });
 
     app.post('/installed', (req, res) => {
-        console.log("installed-log");
+        console.log("HEADER-LOG");
         console.log(req.headers);
+        console.log("BODY-LOG");
         console.log(req.body);
     });
 
-    app.post('/uninstalled', (req, res) => {
-        console.log("uninstalled");
-        // console.log(addon);
-    });
+    // app.post('/uninstalled', (req, res) => {
+
+    // });
 
     app.get('/hello-world', (req, res) => {
       console.log("hello-world");
