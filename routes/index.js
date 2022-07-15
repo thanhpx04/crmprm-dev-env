@@ -3,12 +3,12 @@ export default function routes(app, addon) {
         res.redirect('/atlassian-connect.json');
     });
 
-    app.post('/installed', (req, res) => {
-        console.log("HEADER-LOG");
-        console.log(req.headers);
-        console.log("BODY-LOG");
-        console.log(req.body);
-    });
+    // app.post('/installed', (req, res) => {
+    //     console.log("HEADER-LOG");
+    //     console.log(req.headers);
+    //     console.log("BODY-LOG");
+    //     console.log(req.body);
+    // });
 
     app.get('/hello-world', (req, res) => {
       console.log("hello-world");
@@ -22,8 +22,6 @@ export default function routes(app, addon) {
     });
 
     app.get('/uikit', (req, res) => {
-      console.log("uikit");
-      console.log(res);
       res.render(
         'uikit-demo.jsx',
         {
